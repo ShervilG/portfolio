@@ -4,7 +4,7 @@ Personal portfolio site for **Shervil Gupta**, Lead Member of Technical Staff at
 
 ## Project overview
 
-- The whole site is one static file: `index.html`. It has inline `<style>` and a tiny inline `<script>` that fills in the footer year.
+- A static site of three files: `index.html` (markup), `style.css` (all styles) and `script.js` (theme toggle and footer year). `script.js` is loaded in `<head>` without `defer` on purpose so the saved theme applies before first paint.
 - No build step, no framework, no package manager, no dependencies. Keep it that way unless asked.
 - To preview, open `index.html` in a browser, or run `python3 -m http.server` and visit `http://localhost:8000`.
 
