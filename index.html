@@ -168,50 +168,6 @@
       font-size: 1.04rem;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 25px;
-      border-radius: 14px;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: #66539b;
-    }
-
-    .card h3 {
-      font-size: 1.15rem;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 18px;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .tag {
-      color: #d1c4ff;
-      background: #211b32;
-      padding: 4px 9px;
-      border-radius: 5px;
-      font-size: 0.75rem;
-    }
-
     .experience-item {
       padding: 24px 0;
       border-bottom: 1px solid var(--border);
@@ -232,6 +188,16 @@
 
     .experience-item time {
       white-space: nowrap;
+    }
+
+    .experience-details {
+      color: #c4c9d5;
+      margin: 12px 0 0 20px;
+      font-size: 0.93rem;
+    }
+
+    .experience-details li + li {
+      margin-top: 8px;
     }
 
     .contact-box {
@@ -279,10 +245,6 @@
         letter-spacing: -2px;
       }
 
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
       section {
         padding: 55px 0;
       }
@@ -308,7 +270,6 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -317,7 +278,7 @@
   <main>
     <div class="container">
       <section class="hero" id="home">
-        <p class="eyebrow">Senior Software Engineer · Slack</p>
+        <p class="eyebrow">Lead Member of Technical Staff · Salesforce</p>
 
         <h1>
           Building things<br>
@@ -325,13 +286,13 @@
         </h1>
 
         <p class="hero-description">
-          I'm Shervil Gupta, a Senior Software Engineer at Slack building
-          reliable systems, thoughtful product experiences, and software
-          that helps teams move faster and work better together.
+          I'm Shervil Gupta, a software engineer at Salesforce working on
+          Slack. I build reliable systems and product experiences, with a
+          focus on improving efficiency, performance, and customer outcomes.
         </p>
 
         <div class="buttons">
-          <a href="#projects" class="button primary">Explore my work ↗</a>
+          <a href="#experience" class="button primary">View my experience ↗</a>
           <a href="#contact" class="button">Get in touch</a>
         </div>
       </section>
@@ -343,12 +304,11 @@
         </p>
 
         <p class="about-text">
-          I'm Shervil Gupta, a Senior Software Engineer at Slack, focused
-          on building scalable, resilient systems and product experiences
-          that make collaboration smoother for teams at scale. I enjoy
-          combining engineering craft with real-world problem solving,
-          from architecture and performance to shipping software people
-          rely on every day.
+          I'm Shervil Gupta, a Lead Member of Technical Staff at Salesforce,
+          working on Slack. My experience spans backend engineering, cloud
+          infrastructure, and product development. I enjoy solving complex
+          problems through thoughtful system design, pragmatic migrations,
+          and a focus on measurable impact for customers and the business.
         </p>
       </section>
 
@@ -360,81 +320,83 @@
 
         <div class="experience-item">
           <div>
-            <h3>Senior Software Engineer</h3>
-            <p>Slack</p>
+            <h3>Lead Member of Technical Staff</h3>
+            <p>Salesforce · Slack</p>
+            <ul class="experience-details">
+              <li>Currently working to increase paid plan conversions through AI-powered intelligent plan recommendations.</li>
+              <li>Led proofs of concept to improve engineering efficiency using generative AI tools and MCP servers.</li>
+              <li>Led an architectural optimization migration for a P1 service, reducing infrastructure costs by 50% with zero downtime.</li>
+            </ul>
           </div>
-          <time>Present</time>
+          <time>Aug 2026 – Present</time>
         </div>
-      </section>
 
-      <section id="projects">
-        <h2 class="section-heading">Featured projects</h2>
-        <p class="section-description">
-          A few things I've built, explored, or am currently working on.
-        </p>
+        <div class="experience-item">
+          <div>
+            <h3>Senior Member of Technical Staff</h3>
+            <p>Salesforce · Slack</p>
+            <ul class="experience-details">
+              <li>Led a P1 service codebase migration that reduced redundant network calls and infrastructure costs.</li>
+              <li>Led A/B experiments on Slack's Expansion Team to reduce churn and grow annual contract value year over year.</li>
+              <li>Addressed critical security vulnerabilities across services and fixed a Slack Add-on sign-in issue, cutting average sign-in time by 50%.</li>
+              <li>Built data pipelines with Apache Airflow and SparkSQL to deliver actionable insights through a Slack Add-on.</li>
+            </ul>
+          </div>
+          <time>Mar 2024 – Aug 2026</time>
+        </div>
 
-        <div class="grid">
-          <article class="card">
-            <h3>Distributed Cache</h3>
-            <p>
-              A lightweight caching service exploring eviction policies,
-              concurrency, TTLs, and low-latency data access.
-            </p>
-            <div class="tags">
-              <span class="tag">Go</span>
-              <span class="tag">Redis</span>
-              <span class="tag">Systems Design</span>
-            </div>
-            <p style="margin: 20px 0 0;">
-              <a href="https://github.com/" target="_blank"
-                 rel="noopener noreferrer">View on GitHub ↗</a>
-            </p>
-          </article>
+        <div class="experience-item">
+          <div>
+            <h3>Software Engineer II</h3>
+            <p>Microsoft · Cost Planning</p>
+            <p>Optimized APIs and scheduled jobs, and built features to automate workflows for network cost planners.</p>
+          </div>
+          <time>Dec 2023 – Feb 2024</time>
+        </div>
 
-          <article class="card">
-            <h3>Rate Limiter</h3>
-            <p>
-              An API rate-limiting service using token bucket and sliding
-              window algorithms to control traffic at scale.
-            </p>
-            <div class="tags">
-              <span class="tag">Java</span>
-              <span class="tag">Redis</span>
-              <span class="tag">APIs</span>
-            </div>
-            <p style="margin: 20px 0 0;">
-              <a href="https://github.com/" target="_blank"
-                 rel="noopener noreferrer">View on GitHub ↗</a>
-            </p>
-          </article>
+        <div class="experience-item">
+          <div>
+            <h3>Software Engineer</h3>
+            <p>Microsoft · Cloud Supply Chain</p>
+            <p>Worked on disposition channel automation to support sustainable disposition of data center assets.</p>
+          </div>
+          <time>Aug 2022 – Nov 2023</time>
+        </div>
 
-          <article class="card">
-            <h3>Personal Website</h3>
-            <p>
-              This portfolio — a simple, fast, responsive website hosted
-              for free using GitHub Pages.
-            </p>
-            <div class="tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">GitHub Pages</span>
-            </div>
-            <p style="margin: 20px 0 0;">
-              <a href="https://github.com/" target="_blank"
-                 rel="noopener noreferrer">View source ↗</a>
-            </p>
-          </article>
+        <div class="experience-item">
+          <div>
+            <h3>Software Engineer</h3>
+            <p>Google · Cloud Data Insights</p>
+            <p>Helped design and develop a unified catalogue of cloud products.</p>
+          </div>
+          <time>Sep 2021 – Aug 2022</time>
+        </div>
 
-          <article class="card">
-            <h3>More coming soon</h3>
-            <p>
-              Have another project? Add its description, technologies,
-              and repository link here.
-            </p>
-            <div class="tags">
-              <span class="tag">In Progress</span>
-            </div>
-          </article>
+        <div class="experience-item">
+          <div>
+            <h3>Software Development Engineer</h3>
+            <p>DP World · E-Commerce</p>
+            <p>Built seller backend services for the Dubuy and Dragonmart websites.</p>
+          </div>
+          <time>May 2021 – Sep 2021</time>
+        </div>
+
+        <div class="experience-item">
+          <div>
+            <h3>Software Development Engineer</h3>
+            <p>OYO · Growth Tech</p>
+            <p>Built an audit system to streamline referral campaign creation and contributed to growth feature migration.</p>
+          </div>
+          <time>Aug 2020 – May 2021</time>
+        </div>
+
+        <div class="experience-item">
+          <div>
+            <h3>Software Development Intern</h3>
+            <p>OYO</p>
+            <p>Developed the backend for OYO Circle and features for an internal campaign automation tool.</p>
+          </div>
+          <time>Jan 2020 – Jul 2020</time>
         </div>
       </section>
 
@@ -448,12 +410,12 @@
 
           <div class="buttons">
             <a class="button primary"
-               href="mailto:your.email@example.com">Email me ↗</a>
+               href="mailto:wintergpt45@gmail.com">Email me ↗</a>
             <a class="button"
-               href="https://www.linkedin.com/"
+               href="https://www.linkedin.com/in/shervil-gupta-098216164/"
                target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
             <a class="button"
-               href="https://github.com/"
+               href="https://github.com/ShervilG"
                target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           </div>
         </div>
@@ -465,8 +427,8 @@
     <div class="container footer-content">
       <span>© <span id="year"></span> Shervil Gupta. Built with HTML & CSS.</span>
       <div class="socials">
-        <a href="https://github.com/">GitHub</a>
-        <a href="https://www.linkedin.com/">LinkedIn</a>
+        <a href="https://github.com/ShervilG" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/shervil-gupta-098216164/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
   </footer>
