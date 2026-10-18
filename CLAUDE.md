@@ -14,7 +14,7 @@ Sections in order, each linked from the sticky header nav:
 
 1. **Hero** (`#home`): eyebrow with the current role, the "Building things that scale." heading, a short intro and CTA buttons.
 2. **About** (`#about`): a short bio paragraph.
-3. **Experience** (`#experience`): `.experience-item` blocks, newest first.
+3. **Experience** (`#experience`): `.company` blocks (logo + company name, then its `.role` entries), newest first.
 4. **Contact** (`#contact`): `.contact-box` with Email, LinkedIn and GitHub buttons.
 5. **Footer**: copyright plus social links.
 
@@ -34,22 +34,28 @@ When the role changes, update **all** of these spots together: the `<title>`, th
 
 ## Adding an experience entry
 
-Copy this pattern and put it at the top of `#experience`:
+Experience is grouped by company, newest company first. Add a new role to the top of its company's `.company` block, or copy a whole block for a new company (the logo is an inline SVG or a text badge in `.company-logo`):
 
 ```html
-<div class="experience-item">
-  <div>
-    <h3>Role Title</h3>
-    <p>Company · Team</p>
+<div class="company">
+  <div class="company-header">
+    <span class="company-logo" title="Company">…logo…</span>
+    <h3>Company</h3>
+  </div>
+  <div class="role">
+    <div class="role-head">
+      <h4>Role Title</h4>
+      <time>Mon YYYY – Present</time>
+    </div>
+    <p class="role-team">Team</p>
     <ul class="experience-details">
       <li>Impact-focused bullet with a measurable result.</li>
     </ul>
   </div>
-  <time>Mon YYYY – Present</time>
 </div>
 ```
 
-- Recent or major roles get an `<ul class="experience-details">` bullet list. Older roles use a single `<p>` summary.
+- Recent or major roles get an `<ul class="experience-details">` bullet list. Older roles use a single `<p class="role-desc">` summary.
 - Dates use the format `Mon YYYY – Mon YYYY` with an en dash (`–`). The current role ends in `Present`.
 - When a new role is added, change the previous role's `Present` to its end date.
 
